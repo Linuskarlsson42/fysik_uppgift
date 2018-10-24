@@ -1,9 +1,10 @@
 package fysik_uppgift;
 
 public enum FluidTable {
-	H20(0.998, 4.19, 0, 100, 2260), 
-	WATER(0.998, 4.19, 0, 100, 2260),
-	H2SO4(1.84, 1.38, 10, 336, 511)
+	VATTEN(0.998, 4.19, 0, 100, 2260), 
+	SVAVELSYRA(1.84, 1.38, 10, 336, 511),
+	METANOL(0.791, 1.20, 2.50, )
+	
 	;
 
 	double density;
