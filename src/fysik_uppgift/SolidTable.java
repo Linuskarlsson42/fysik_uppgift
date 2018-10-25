@@ -3,7 +3,10 @@ package fysik_uppgift;
 public enum SolidTable {
 	
 	ICE(0.92, 2.2, 0, 334),
-	IRON(7.87, 0.45, 1538, 276)
+	IRON(7.87, 0.45, 1538, 276),
+	GULD(19.3, 0.13, 327, 24.7),
+	URAN(19.1, 0.12, 1135, 53),
+	STÅL(7.8, 0.46, 1350, 53),
 	;
 
 	double density;
