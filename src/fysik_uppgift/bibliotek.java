@@ -90,4 +90,5 @@ public class bibliotek {
 		return svttime;
 	}
 //	15
+	
 }
