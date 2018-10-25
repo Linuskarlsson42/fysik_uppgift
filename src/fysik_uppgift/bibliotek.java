@@ -90,5 +90,37 @@ public class bibliotek {
 		return svttime;
 	}
 //	15
-	
+	double work(double force, double distance) {
+		double work;
+		work = force * distance;
+		return work;
+	}
+//	16
+	double power(double work, double time) {
+		double power;
+		power = work/time;
+		return power;
+	}
+//	17
+	double heat(SolidTable solid, double mass, double deltaT) {
+		double heat;
+		heat = solid.heatCapacity * mass * deltaT;
+		return heat;
+	}
+//	18
+	double heat(FluidTable fluid, double volume, double deltaT) {
+		double heat;
+		heat = fluid.heatCapacity * volume * deltaT;
+		return heat;
+	}
+//	19
+	double heat(GasTable gas, double volume, double deltaT) {
+		double heat;
+		heat = gas.heatCapacity * volume * deltaT;
+		return heat;
+	}
+//	20
+	double velocityToHeight(double velocity) {
+		
+	}
 }
