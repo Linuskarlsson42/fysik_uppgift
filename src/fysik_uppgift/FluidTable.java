@@ -3,7 +3,8 @@ package fysik_uppgift;
 public enum FluidTable {
 	VATTEN(0.998, 4.19, 0, 100, 2260), 
 	SVAVELSYRA(1.84, 1.38, 10, 336, 511),
-	METANOL(0.791, 1.20, 2.50, )
+	METANOL(0.791,2.50,-98,65,1100),
+	
 	
 	;
 

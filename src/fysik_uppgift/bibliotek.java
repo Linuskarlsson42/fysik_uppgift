@@ -33,11 +33,61 @@ public class bibliotek {
 		
 	}
 //	6
-	double potentialEnergy(double mass, double height) {
+	public static double potentialEnergy(double mass, double height) {
 		double potentialenergy;
 		potentialenergy = mass * g * height;
 		return potentialenergy;
 	}
 //	7
-	double fallSpeed(double height)
+	public static double fallSpeed(double height) {
+		double fallspeed;
+	    fallspeed = Math.sqrt(2*g*height);
+	    return fallspeed;
+	}
+//	8
+	public static double delta(double first, double last) {
+		double delta;
+		delta = first - last;
+		return delta;
+	}
+//	9
+	public static double volumeToMass(FluidTable fluid, double volume) {
+		double volumetomass;
+		volumetomass = fluid.density * volume;
+		
+		return volumetomass;
+		
+	}
+//	10
+	double volumeToMass(GasTable gas, double volume) {
+		double gasvolumetomass;
+		gasvolumetomass = gas.density * volume;
+		return gasvolumetomass;
+	}
+//	11
+	double volumeToMass(SolidTable solid, double volume) {
+		double solidvolumetomass;
+		solidvolumetomass = solid.density * volume;
+		return solidvolumetomass;
+	}
+//	12
+	double svtVelocity(double distance, double time) {
+		double svtVelocity;
+		svtVelocity = distance / time;
+		return svtVelocity;
+	}
+//	13
+	double svtDistance(double velocity, double time) {
+		double svtDistance;
+		svtDistance = velocity * time;
+		return svtDistance;
+		
+	}
+//	14
+	double svtTime(double distance, double velocity) {
+		double svttime;
+		svttime = distance / velocity;
+		return svttime;
+	}
+//	15
 }
