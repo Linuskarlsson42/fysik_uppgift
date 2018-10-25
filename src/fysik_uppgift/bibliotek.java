@@ -2,6 +2,10 @@ package fysik_uppgift;
 
 public class bibliotek {
 	static double g = 9.82;
+	static double G = 6.67E-11;
+	static double R = 8.3145;
+	static double P_0 = 100000;
+	static double c = 2.99792458E8;
 	
 //  1	
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -59,32 +63,32 @@ public class bibliotek {
 		
 	}
 //	10
-	double volumeToMass(GasTable gas, double volume) {
-		double gasvolumetomass;
-		gasvolumetomass = gas.density * volume;
-		return gasvolumetomass;
+	public static double volumeToMass(GasTable gas, double volume) {
+		double volumetomass;
+		volumetomass = gas.density * volume;
+		return volumetomass;
 	}
 //	11
-	double volumeToMass(SolidTable solid, double volume) {
-		double solidvolumetomass;
-		solidvolumetomass = solid.density * volume;
-		return solidvolumetomass;
+	public static double volumeToMass(SolidTable solid, double volume) {
+		double volumetomass;
+		volumetomass = solid.density * volume;
+		return volumetomass;
 	}
 //	12
-	double svtVelocity(double distance, double time) {
+	public static double svtVelocity(double distance, double time) {
 		double svtVelocity;
 		svtVelocity = distance / time;
 		return svtVelocity;
 	}
 //	13
-	double svtDistance(double velocity, double time) {
+	public static double svtDistance(double velocity, double time) {
 		double svtDistance;
 		svtDistance = velocity * time;
 		return svtDistance;
 		
 	}
 //	14
-	double svtTime(double distance, double velocity) {
+	public static double svtTime(double distance, double velocity) {
 		double svttime;
 		svttime = distance / velocity;
 		return svttime;
@@ -96,31 +100,28 @@ public class bibliotek {
 		return work;
 	}
 //	16
-	double power(double work, double time) {
+	public static double power(double work, double time) {
 		double power;
 		power = work/time;
 		return power;
 	}
 //	17
-	double heat(SolidTable solid, double mass, double deltaT) {
+	public static double heat(SolidTable solid, double mass, double deltaT) {
 		double heat;
 		heat = solid.heatCapacity * mass * deltaT;
 		return heat;
 	}
 //	18
-	double heat(FluidTable fluid, double volume, double deltaT) {
+	public static double heat(FluidTable fluid, double volume, double deltaT) {
 		double heat;
 		heat = fluid.heatCapacity * volume * deltaT;
 		return heat;
 	}
 //	19
-	double heat(GasTable gas, double volume, double deltaT) {
+	public static double heat(GasTable gas, double volume, double deltaT) {
 		double heat;
 		heat = gas.heatCapacity * volume * deltaT;
 		return heat;
 	}
-//	20
-	double velocityToHeight(double velocity) {
-		
-	}
+
 }
