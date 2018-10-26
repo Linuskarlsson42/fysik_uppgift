@@ -19,6 +19,8 @@ public class table {
 		double deltaT = 1;
 		System.out.println(bibliotek.heat(FluidTable.VATTEN, volume, deltaT));
 //		uppgift 4
+		double deep = 100;
+		System.out.println(bibliotek.pressureUnderWater(deep) + bibliotek.P_0);
 	}
 
 }
