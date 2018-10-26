@@ -7,20 +7,19 @@ public class table {
 		Scanner input = new Scanner(System.in);
 //		uppgift 1 
 		
-		//double volume = 80;
-		//System.out.println(bibliotek.volumeToMass(SolidTable.IRON, volume));
+		System.out.println(bibliotek.volumeToMass(SolidTable.IRON, 80));
 		
 //		uppgift 2
-		double velocity = 2.8;
-		double time = 60*60;
-		System.out.println(bibliotek.svtDistance(velocity, time));
+		
+		System.out.println(bibliotek.svtDistance(2.8, 3600));
 //		uppgift 3
-		double volume = 5;
-		double deltaT = 1;
-		System.out.println(bibliotek.heat(FluidTable.VATTEN, volume, deltaT));
+		
+		System.out.println(bibliotek.heat(FluidTable.VATTEN, 5, 1));
 //		uppgift 4
-		double deep = 100;
-		System.out.println(bibliotek.pressureUnderWater(deep) + bibliotek.P_0);
+		
+		System.out.println(bibliotek.pressureUnderWater(100) + bibliotek.P_0);
+//		uppgift 5 
+		System.out.println(bibliotek.velocityToHeight(180) + 1.80);
 	}
 
 }
