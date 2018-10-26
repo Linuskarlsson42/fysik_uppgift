@@ -94,7 +94,7 @@ public class bibliotek {
 		return svttime;
 	}
 //	15
-	double work(double force, double distance) {
+	public static double work(double force, double distance) {
 		double work;
 		work = force * distance;
 		return work;

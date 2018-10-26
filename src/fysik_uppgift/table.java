@@ -20,6 +20,9 @@ public class table {
 		System.out.println(bibliotek.pressureUnderWater(100) + bibliotek.P_0);
 //		uppgift 5 
 		System.out.println(bibliotek.velocityToHeight(180) + 1.80);
+//		uppgift 6
+		System.out.println(bibliotek.power(bibliotek.work(740, 100), 4.4));
+//		uppgift 7
 	}
 
 }
