@@ -1,6 +1,12 @@
 package fysik_uppgift;
 
 public class bibliotek {
+/**
+ * 
+ * 
+ * 
+ * 
+ */
 	static double g = 9.82;
 	static double G = 6.67E-11;
 	static double R = 8.3145;
