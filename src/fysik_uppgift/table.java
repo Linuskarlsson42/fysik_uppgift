@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class table {
 	public static void main(String[] args) {
+		
 		Scanner input = new Scanner(System.in);
 //		uppgift 1 
 		
@@ -29,6 +30,9 @@ public class table {
 			losning++;
 		}
 				System.out.println(losning);
+				
+//		uppgift 8
+		System.out.println(bibliotek.celsiusTokelvin(bibliotek.fahrenheitToCelsius(30)));
 		
 	}
 

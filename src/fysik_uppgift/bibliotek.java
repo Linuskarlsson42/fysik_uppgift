@@ -13,32 +13,61 @@ public class bibliotek {
 	static double P_0 = 100000;
 	static double c = 2.99792458E8;
 	
-//  1	
+/**
+ * denna metod tar in grader i fahrenheit och ger tillbaka gradet i celsius
+ * 
+ */
 	public static double fahrenheitToCelsius(double fahrenheit) {
 		double celsius;
 		celsius = (fahrenheit -32)/1.8;
 		return celsius;
 	}
-//	2
+/**
+ * Denna metod får in double kelvin
+ * Den tar kelvin - 273.15 för att omvandla den till celsius 
+ * ger tillbaka grader i celsius
+ * 
+ */
 	public static double kelvinToCelsius(double kelvin) {
-		return kelvin + -273.15;
+		return kelvin - 273.15;
 	}
-//	3
+/**
+ * denna metod räknar ut det tryket (i pascal/Pa) man känner under ett visst djup
+ * 
+ * Först tar den densiteten en vetska från enumen FluidTable
+ * 
+ * När den har densiteten av valt ämne så räknar den ut tryket genom att multiplicera
+ * den med djupet och tyngdaccelerationen för sverige
+ * Ger tillbaka tryket i pascal.
+ * 
+ */
 	public static double fluidPressure(FluidTable fluid, double deep) {
 		double fluidpressure;
 		fluidpressure = fluid.density * deep * g;
 		return fluidpressure;
 	}
-//	4
+/**
+ * 	Denna metod räknar ut tryket bara för vatten vid ett visst djup.
+ *  Den gör det genom att ta vattnets densitet (998) och som i den förra metoden
+ *  tar det ggr djupet och tyngdaccelerationen.
+ *  ger tillbaka tryk i pascal.
+ * 
+ */
 	public static double pressureUnderWater(double deep) {
 		double pressureunderwater;
 		pressureunderwater = 998 * deep * g;
 		return pressureunderwater;
 	}
-//	5
+/**
+ * Denna metod räknar ut den kenetiska energi som ett föremål utsätts för vid en hastighet
+ * Först tar den in massan (i kg) och hastigheten (i m/s)
+ * Med hjälp av dessa två doubles räknar den ut och ger tillbaka den kenetiska energin.
+ * 
+ *
+ */
 	public static double kineticEnergy(double mass, double velocity) {
 		double keneticenergy;
-		keneticenergy = (mass * velocity * velocity) / 2;
+		keneticenergy = (mass * Math.pow(velocity, 2)) / 2;
 		return keneticenergy;
 		
 	}
@@ -133,6 +162,11 @@ public class bibliotek {
 	public static double velocityToHeight(double velocity){
 			return Math.pow(velocity, 2)/(2*g);
 		}
-	
+//	21
+	public static double celsiusTokelvin(double celsius) {
+		double kelvin;
+		kelvin = celsius + 273.15;
+		return kelvin;
+	}
 
 }
