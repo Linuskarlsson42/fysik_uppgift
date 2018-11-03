@@ -71,13 +71,27 @@ public class bibliotek {
 		return keneticenergy;
 		
 	}
-//	6
+/**
+ * 6
+ *  En metod som räknar ut potential energy 
+ *  detta gör den genom ta in en double mass och double height
+ *  sedan multipliseras dessa två och tyngdaccelerationen med vanandra
+ *  ger tillbaka den potentiala energin.
+ * 
+ */
 	public static double potentialEnergy(double mass, double height) {
 		double potentialenergy;
 		potentialenergy = mass * g * height;
 		return potentialenergy;
 	}
-//	7
+/**
+ * 7
+ * En metod som räknar ut hastigheten på ett föremål från en viss höjd.
+ * Den tar in en double height
+ * height och tyngdaccelerationen multiplicaras med varandra och med 2 som
+ * kvadtarrot ur svaret av detta, ger tillbaka hastigheten/fallspeed.
+ *
+ */
 	public static double fallSpeed(double height) {
 		double fallspeed;
 	    fallspeed = Math.sqrt(2*g*height);
