@@ -29,15 +29,23 @@ public class table {
 			lösning++;
 		}
 				System.out.println(lösning);
-				
+/**
+ * uppgift 8
+ * hur mycket 30 grader fahrenheit är i kelvin 				
+ */
 		System.out.println(bibliotek.celsiusTokelvin(bibliotek.fahrenheitToCelsius(30)));
-
-		System.out.println(bibliotek.heat(FluidTable.KVICKSILVER, 20, (bibliotek.delta(5, 20))));
-	/**
-	 * kraften mellan en stillastående bil med tyngden 1050kg och en överviktig man
-	 * som väger 150kg som håller ett avsånd med 34 meter från bilen.
-	 * Detta är då bortsätt från alla andra krafter såklart.
-	 */
+/**
+ * uppgift 9
+ * hur stort trycket är 10 meter under svavelsyra		
+ */
+		System.out.println(bibliotek.fluidPressure(FluidTable.SVAVELSYRA, 10));
+		
+/**
+* uppgift 10 
+* kraften mellan en stillastående bil med massan 1050kg och en man
+* som väger 150kg som håller ett avsånd med 34 meter från bilen.
+* Detta är då bortsätt från alla andra krafter.
+*/
 		System.out.println(bibliotek.NewtonsGravitationslag(1050, 150, 34) + " N");
 	}
 

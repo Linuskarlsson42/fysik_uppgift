@@ -233,31 +233,58 @@ public class bibliotek {
 	}
 /**
  * 20 
- *
+ * Räknar ut vilken höjd ett föremål med en viss hastighet har
+ * Får in en double velocity
+ * Den börjar med att att ta velocity upphöjt till 2.
+ * Sedan tar den 2 * tyngdaccelerationen och dividerar de två med varandra
+ * Ger tillbaka höjden/height
  */
 	public static double velocityToHeight(double velocity){
 			return Math.pow(velocity, 2)/(2*g);
 		}
-//	21
+/**
+ * 21
+ * Gör om grader celsius till kelvin.
+ * Får in en double celsius som senare adderas med 273.15 och ger tillbaka 
+ * grader i kelvin.
+ */
 	public static double celsiusTokelvin(double celsius) {
 		double kelvin;
 		kelvin = celsius + 273.15;
 		return kelvin;
 	}
-//	22 
+/**
+ * 22
+ * Räknar ut densiteten på ett ämne med en viss massa och volym.
+ * Får in en double mass och en double volume.
+ * Dividerar mass med volume och ger tillbaka densiteten.
+ */
 	public static double Density(double mass, double volume) {
 		double density;
 		density = mass/volume;
 		return density;
 	}
-//  23
-	public static double NewtonsGravitationslag(double MassOne, double MassTwo, double distance) {
+/**
+ * 23
+ * Lagen handlar om hur alla partiklar med en massa kommer att dras mot varandra så 
+ * detta är en metod som räknar ut kraften mella två objekt.
+ * Den får in en double m1 för första massan, double m2 för den andra massan 
+ * och en double distance för längden mellan de två massorna.
+ * Sedan tar den och multiplicerar de båda massorna med varandra och dividerar det med
+ * längden upphöjt till 2, och sist gånger gravitationskonstanten.
+ * Ger tillbaka den kraft som värkar mellan dem två föremål.
+ */
+	public static double NewtonsGravitationslag(double m1, double m2, double distance) {
 		double F;
-		F = (MassOne * MassTwo)/Math.pow(distance, 2);
-		F = F * G;
+		F =  G*((m1 * m2)/Math.pow(distance, 2));
 		return F;
 	}
-//	24 
+/**
+ * Räknar ut impuls.
+ * får in en double force och double deltaT.
+ * dividerar force med deltaT och ger tillbaka impuls. 
+ * 
+ */
 	public static double Impuls(double Force, double DeltaT) {
 		double Impuls;
 		Impuls = Force/DeltaT;
@@ -266,9 +293,12 @@ public class bibliotek {
 
 /**
  * 25
- * en metod som räknar ut tyngdkraften på t.ex jupiter med hjälp av dess massa, radie
- * och gravitationskonstanten. 
- *
+ * en metod som räknar ut tyngdaccelerationen på t.ex jupiter med hjälp av dess massa, 
+ * radie och gravitationskonstanten. 
+ * Får in en double mass och en double distance.
+ * Först multiplicerar man massan med gravitationskonstanten, sendan tar den distance
+ * upphöjt till 2 och tillslut divideras båda.
+ * ger tillbaka tyngdaccelerationen.
  */
 	public static double G(double mass, double distance) {
 		double Ge;
