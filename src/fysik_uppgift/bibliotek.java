@@ -100,7 +100,7 @@ public class bibliotek {
 //	8
 	public static double delta(double first, double last) {
 		double delta;
-		delta = first - last;
+		delta = last - first;
 		return delta;
 	}
 //	9
@@ -182,5 +182,30 @@ public class bibliotek {
 		kelvin = celsius + 273.15;
 		return kelvin;
 	}
-
+//	22 
+	public static double Density(double mass, double volume) {
+		double density;
+		density = mass/volume;
+		return density;
+	}
+//  23
+	public static double NewtonsGravitationslag(double MassOne, double MassTwo, double distance) {
+		double F;
+		F = (MassOne * MassTwo)/Math.pow(distance, 2);
+		F = F * G;
+		return F;
+	}
+//	24 
+	public static double Impuls(double Force, double DeltaT) {
+		double Impuls;
+		Impuls = Force/DeltaT;
+		return Impuls;
+	}
+//  25
+	public static double Effekt(double work, double deltaT) {
+		double E;
+		E = work/deltaT;
+		return E;
+	}
+//	26
 }

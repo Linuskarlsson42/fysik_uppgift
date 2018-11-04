@@ -31,9 +31,16 @@ public class table {
 		}
 				System.out.println(losning);
 				
-//		uppgift 8
+/**
+ * 8
+ * Hur mycket 30 Fahrenheit blir i kelvin
+ */
 		System.out.println(bibliotek.celsiusTokelvin(bibliotek.fahrenheitToCelsius(30)));
-		
+/**
+ * 9
+ * Hur mycket energi det krväs för att värma upp 20 liter kvicksilver 15 grader		
+ */
+		System.out.println(bibliotek.heat(FluidTable.KVICKSILVER, 20, (bibliotek.delta(5, 20))));
 	}
 
 }
