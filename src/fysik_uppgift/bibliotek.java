@@ -8,7 +8,7 @@ public class bibliotek {
  * 
  */
 	static double g = 9.82;
-	static double G = 6.67E-11;
+	static double G = 6.6726E-11;
 	static double R = 8.3145;
 	static double P_0 = 100000;
 	static double c = 2.99792458E8;
@@ -97,13 +97,24 @@ public class bibliotek {
 	    fallspeed = Math.sqrt(2*g*height);
 	    return fallspeed;
 	}
-//	8
+/**
+ * 8
+ *  En metod som får in två olika tider och räknar ut DeltaT genom att ta den tid
+ *  sista uppfattade tiden och subtrahera den med den första.
+ *  
+ */
 	public static double delta(double first, double last) {
 		double delta;
 		delta = last - first;
 		return delta;
 	}
-//	9
+/**
+ * 9
+ * får in den densitet från vald vätska från enumen FluidTable.
+ * sedan tar den in volymen av vätskan och multiplicerar det med densiteten för att
+ * få ut massan.
+ *
+ */
 	public static double volumeToMass(FluidTable fluid, double volume) {
 		double volumetomass;
 		volumetomass = fluid.density * volume;
@@ -111,68 +122,119 @@ public class bibliotek {
 		return volumetomass;
 		
 	}
-//	10
+/**
+ * 10
+ * Gör samma sak som 9 men får densiteten från GasTable.
+ */
 	public static double volumeToMass(GasTable gas, double volume) {
 		double volumetomass;
 		volumetomass = gas.density * volume;
 		return volumetomass;
 	}
-//	11
+/**
+ * 11
+ * Gör samma sak som 9 men får densiteten från SolidTable
+ */
 	public static double volumeToMass(SolidTable solid, double volume) {
 		double volumetomass;
 		volumetomass = solid.density * volume;
 		return volumetomass;
 	}
-//	12
+/**
+ * 12
+ * räknar ut hastigheten över en viss sträcka och tid.
+ * tar in en double distance och en double time.
+ * dividerar distance med time och ger tillbaka svtVelocity.
+ */
 	public static double svtVelocity(double distance, double time) {
 		double svtVelocity;
 		svtVelocity = distance / time;
 		return svtVelocity;
 	}
-//	13
+/**
+ * 13
+ * Räknar ut sträckan med hastighet och tid.
+ * får in en double velocity och en double time.
+ * multiplicerar velocity med time och ger tillbaka svtDistance
+ */
 	public static double svtDistance(double velocity, double time) {
 		double svtDistance;
 		svtDistance = velocity * time;
 		return svtDistance;
 		
 	}
-//	14
+/**
+ * 14
+ * Räknar ut tiden av en sträcka och hastighet
+ * får in en double distance och en double velocity
+ * dividerar distance med velocity och ger tillbaka svtTime
+ */
 	public static double svtTime(double distance, double velocity) {
-		double svttime;
-		svttime = distance / velocity;
-		return svttime;
+		double svtTime;
+		svtTime = distance / velocity;
+		return svtTime;
 	}
-//	15
+/**
+ * 15
+ * Räknar ut arbete mha kraft och sträcka 
+ * får in en double distance och en double force
+ * multiplicerar force med distance och ger tillbaka arbete 
+ */
 	public static double work(double force, double distance) {
 		double work;
 		work = force * distance;
 		return work;
 	}
-//	16
+/**
+ * 16
+ * räknar ut effekten mha arbete och tid
+ * får in en double work och en double time
+ * dividerar work med time och ger tillbaka effekt/power
+ */
 	public static double power(double work, double time) {
 		double power;
 		power = work/time;
 		return power;
 	}
-//	17
+/**
+ * 17
+ * Räknar ut hur mycket energi det krävs för att värma upp ett ämne ett visst antal 
+ * grader.
+ * Den får in ett fast ämnes värmekapacitet från enumen SolidTable, en double mass
+ * och en double deltaT
+ * Sen multiplicerar den alla variabler och ger tillbaka energin/heat
+ */
 	public static double heat(SolidTable solid, double mass, double deltaT) {
 		double heat;
 		heat = solid.heatCapacity * mass * deltaT;
 		return heat;
 	}
-//	18
+/**
+ * 18
+ * Denna metod gör samma sak som 17 bara att den tar in värmekapaciteten från 
+ * enumen FluidTable
+ * ger tillbaka energin/heat
+ */
 	public static double heat(FluidTable fluid, double volume, double deltaT) {
 		double heat;
 		heat = fluid.heatCapacity * volume * deltaT;
 		return heat;
 	}
-//	19
+/**
+* 19
+* Denna metod gör samma sak som 17 bara att den tar in värmekapaciteten från 
+* enumen Gastable
+* ger tillbaka energin/heat
+*/
 	public static double heat(GasTable gas, double volume, double deltaT) {
 		double heat;
 		heat = gas.heatCapacity * volume * deltaT;
 		return heat;
 	}
-//  20
+/**
+ * 20 
+ *
+ */
 	public static double velocityToHeight(double velocity){
 			return Math.pow(velocity, 2)/(2*g);
 		}
@@ -201,11 +263,18 @@ public class bibliotek {
 		Impuls = Force/DeltaT;
 		return Impuls;
 	}
-//  25
-	public static double Effekt(double work, double deltaT) {
-		double E;
-		E = work/deltaT;
-		return E;
+
+/**
+ * 25
+ * en metod som räknar ut tyngdkraften på t.ex jupiter med hjälp av dess massa, radie
+ * och gravitationskonstanten. 
+ *
+ */
+	public static double G(double mass, double distance) {
+		double Ge;
+		Ge = (G * mass)/Math.pow(distance, 2);
+		return Ge;
 	}
 //	26
+	
 }
