@@ -28,6 +28,8 @@ public class table {
 			lösning++;
 		}
 				System.out.println(lösning);
+				
+				System.out.println("Egna uppgifter man kan lösa med hjälp av metoderna, 8-10");
 /**
  * uppgift 8
  * hur mycket 30 grader fahrenheit är i kelvin 				
@@ -39,7 +41,7 @@ public class table {
  * massan 2.38 i vatten.
  * (ungefär densitetn på guld)	
  */
-		System.out.println(bibliotek.DensitetPåEttVistFöremål(2.64, 2.504, FluidTable.VATTEN));
+		System.out.println(bibliotek.DensitetPåEttVisstFöremål(2.64, 2.504, FluidTable.VATTEN));
 		
 /**
 * uppgift 10 
@@ -49,7 +51,23 @@ public class table {
 */
 		System.out.println(bibliotek.NewtonsGravitationslag(1050, 150, 34) + " N");
 		
-
+		
+		
+		
+		System.out.println("test med nya metoder");
+/**
+ * Test för att se om metoder fungerar
+ * Hur mycket kraft behöver man för att lyfta upp ett föremål med en vikt på 12kg
+ * och som rymmer 3 liter (omvandlat i m3) under vatten
+ * en stöt mella två objekt med massa 0.8, 0.4 och hastighet 1.5, -1.5
+ * 	
+ */
+		System.out.println(bibliotek.KraftFörLyfting(12, 0.003, FluidTable.VATTEN));
+		System.out.println(bibliotek.ElastiskStöt(0.8, 0.4, 1.5, -1.5));
+		System.out.println(bibliotek.Medelacceleration(bibliotek.delta(5, 10), bibliotek.delta(0, 20)));
+		
+		
+		
 	}
 
 }

@@ -311,6 +311,7 @@ public class bibliotek {
  * Den tar in densiteten hos en vätska och volymen på föremålet.
  * Sedan räknar den ut lyftkraften genom att multiplicera densiteten,
  * tyngaccelerationen och volymen med varandra.
+ * Ger sedan tillbaka lyftkraften.
  */
 	public static double LyftKraft(FluidTable fluid, double volume) {
 		double lyftkraft;
@@ -321,9 +322,16 @@ public class bibliotek {
  * 27
  * Denna metod räknar ut ett föremåls densitet med två massor, en utanför vatten 
  * och en massa när den är i vatten.
+ * Tar in två doubles, för de olika massorna
+ * Först räknar den ut lyftkraften genom att ta massorna * g (densitet finns inte med
+ * efter som de båda skulle tagit ut varandra i formlen) och subtraherar de med 
+ * varandra.
+ * Sedan så divideras det svaret med vattnets densitet * g för att få fram volymen.
+ * Och till sist så divideras massan med volymen för att få fram densiteten, som
+ * sedan ges tillbaka.
  * 
  */
-	public static double DensitetPåEttVistFöremål(double mass, double massUnderWater, FluidTable fluid) {
+	public static double DensitetPåEttVisstFöremål(double mass, double massUnderWater, FluidTable fluid) {
 		double density;
 		double volume;
 		volume = ((mass * g) - (massUnderWater * g))/(fluid.density * g);
@@ -332,5 +340,41 @@ public class bibliotek {
 	}
 /**	
  * 28
+ * Metoden räknar ut hur mycket kraft som behövs för att lyfta ett föremål med en
+ * viss massa och volym under en vätska.
+ * Tar in tre doubles, en för massan, en för volymen och en för vätskans densitet.
+ * Först räknar den ut föremålets tyngdkraft och sedan dess vätsketryck.
+ * Sedan subtraherar den det med tyngdkraften för att se om den flyter.
+ * Om svaret är positivt så betyder det krävs så många Newton för att föremålet
+ * ska flyta.
+ * Om det är negativt så flyter föremålet/kräver ingen extra kraft för att få den 
+ * att flyta.
  */
+	public static double KraftFörLyfting(double mass, double volume, FluidTable fluid) {
+		double Force;
+		Force = mass*g - fluid.density * g * volume;
+		return Force;
+	}
+/**
+ * 29
+ * En metod som räknar ut medelacceleration med två doubles, en för delta hastighet 
+ * och den andra för delta tid.
+ * Den dividerar hastigheten med tiden och ger tillbaka medelaccelerationen.
+ * 
+ */
+	public static double Medelacceleration(double DeltaVelocity, double DeltaTime) {
+		double a;
+		a = DeltaVelocity/DeltaTime;
+		return a;
+	}
+/**
+ * 30
+ * En metod som räknar ut vad två objekts hastighet kommer vara efter en elastisk
+ * stöt
+ */
+	public static double ElastiskStöt(double m1, double m2, double v1, double v2) {
+		double velocity3;
+		velocity3 = ((m1 * v1) + (m2 * v2))/(m1 + m2);
+		return velocity3;
+	}
 }
