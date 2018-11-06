@@ -1,6 +1,5 @@
 package fysik_uppgift;
 
-import java.util.Scanner;
 
 public class table {
 	public static void main(String[] args) {
@@ -36,9 +35,11 @@ public class table {
 		System.out.println(bibliotek.celsiusTokelvin(bibliotek.fahrenheitToCelsius(30)));
 /**
  * uppgift 9
- * hur stort trycket är 10 meter under svavelsyra		
+ * Vad är densiteten på ett föremål med massan 2.64 kg untanför och 
+ * massan 2.38 i vatten.
+ * (ungefär densitetn på guld)	
  */
-		System.out.println(bibliotek.fluidPressure(FluidTable.SVAVELSYRA, 10));
+		System.out.println(bibliotek.DensitetPåEttVistFöremål(2.64, 2.504, FluidTable.VATTEN));
 		
 /**
 * uppgift 10 
@@ -47,6 +48,8 @@ public class table {
 * Detta är då bortsätt från alla andra krafter.
 */
 		System.out.println(bibliotek.NewtonsGravitationslag(1050, 150, 34) + " N");
+		
+
 	}
 
 }

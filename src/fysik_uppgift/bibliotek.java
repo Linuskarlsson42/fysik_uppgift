@@ -212,7 +212,7 @@ public class bibliotek {
 /**
  * 18
  * Denna metod gör samma sak som 17 bara att den tar in värmekapaciteten från 
- * enumen FluidTable
+ * enumen FluidTable och tar in en double volume istället för mass.
  * ger tillbaka energin/heat
  */
 	public static double heat(FluidTable fluid, double volume, double deltaT) {
@@ -223,7 +223,7 @@ public class bibliotek {
 /**
 * 19
 * Denna metod gör samma sak som 17 bara att den tar in värmekapaciteten från 
-* enumen Gastable
+* enumen Gastable och tar in en double volume istället för mass.
 * ger tillbaka energin/heat
 */
 	public static double heat(GasTable gas, double volume, double deltaT) {
@@ -305,6 +305,32 @@ public class bibliotek {
 		Ge = (G * mass)/Math.pow(distance, 2);
 		return Ge;
 	}
-//	26
-	
+/**
+ * 26
+ * Detta är en metod som räknar ut lyftkraften hos ett föremål.
+ * Den tar in densiteten hos en vätska och volymen på föremålet.
+ * Sedan räknar den ut lyftkraften genom att multiplicera densiteten,
+ * tyngaccelerationen och volymen med varandra.
+ */
+	public static double LyftKraft(FluidTable fluid, double volume) {
+		double lyftkraft;
+		lyftkraft = fluid.density * g * volume;
+		return lyftkraft;
+	}
+/**
+ * 27
+ * Denna metod räknar ut ett föremåls densitet med två massor, en utanför vatten 
+ * och en massa när den är i vatten.
+ * 
+ */
+	public static double DensitetPåEttVistFöremål(double mass, double massUnderWater, FluidTable fluid) {
+		double density;
+		double volume;
+		volume = ((mass * g) - (massUnderWater * g))/(fluid.density * g);
+		density = mass/volume;
+		return density;
+	}
+/**	
+ * 28
+ */
 }
