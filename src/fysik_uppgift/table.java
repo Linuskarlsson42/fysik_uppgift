@@ -60,6 +60,8 @@ public class table {
  * Hur mycket kraft behöver man för att lyfta upp ett föremål med en vikt på 12kg
  * och som rymmer 3 liter (omvandlat i m3) under vatten
  * en stöt mella två objekt med massa 0.8, 0.4 och hastighet 1.5, -1.5
+ * Hur isbit som väger 20g och har temperaturen -18C påvärkar en läsk som rymmer
+ * 0.33cl och har en temperatur på 20C.
  * 	
  */
 		System.out.println(bibliotek.KraftFörLyfting(12, 0.003, FluidTable.VATTEN));
