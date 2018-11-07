@@ -65,7 +65,7 @@ public class table {
 		System.out.println(bibliotek.KraftFörLyfting(12, 0.003, FluidTable.VATTEN));
 		System.out.println(bibliotek.ElastiskStöt(0.8, 0.4, 1.5, -1.5));
 		System.out.println(bibliotek.Medelacceleration(bibliotek.delta(5, 10), bibliotek.delta(0, 20)));
-		
+		System.out.println(bibliotek.Blandningstemp(0.33, 0.02, 20, -18, FluidTable.VATTEN, SolidTable.ICE));
 		
 		
 		

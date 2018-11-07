@@ -281,6 +281,7 @@ public class bibliotek {
 		return F;
 	}
 /**
+ * 24
  * Räknar ut impuls.
  * får in en double force och double deltaT.
  * dividerar force med deltaT och ger tillbaka impuls. 
@@ -388,17 +389,24 @@ public class bibliotek {
 		return velocity3;
 	}
 /**
- * Energin för medium övergång
- * @param fluid
- * @param volume
- * @param DeltaT
- * @return
+ * En metod som räknar ut blandningstempraturen när man blandar något fast
+ * med något flytande.
+ * @param F_mass Får in en massa för fluid.
+ * @param S_mass Får in en massa för solid.
+ * @param F_temp Får in en temperatur för fluid.
+ * @param S_temp Får in en temperatur för solid.
+ * @param fluid En fluid från enumen FluidTable, därifrån får den heatCapacity för fluid.
+ * @param solid En solid från enumen SolidTable, därifrån får den heatCapacity och meltEntalpy för solid.
+ * @return Ger tillbaka den totala temperatur som det blivit då energiöverföringen är över.
  */
-	public static double MediumÖvergång(FluidTable fluid, double volume, double DeltaT) {
-		double E;
-		E = fluid.steamEntalpy * volume * fluid.density;
-		return E;
+	public static double Blandningstemp(double F_mass, double S_mass, double F_temp, double S_temp, FluidTable fluid, SolidTable solid) {
+		double T_tot;
+		T_tot = ((solid.heatCapacity * S_mass * S_temp) + (fluid.heatCapacity * F_mass * F_temp) - (solid.meltEntalpy * S_mass))/(fluid.heatCapacity * F_mass + fluid.heatCapacity * S_mass);
+		return T_tot;
 	}
+		
+	
+	
 	
 	
 }
