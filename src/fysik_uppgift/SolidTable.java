@@ -7,6 +7,9 @@ public enum SolidTable {
 	GULD(19.3, 0.13, 327, 24.7),
 	URAN(19.1, 0.12, 1135, 53),
 	STÅL(7.8, 0.46, 1350, 53),
+	ZINK(7.13, 0.39, 420, 117),
+	PLATINA(21.5, 0.133, 1768, 113),
+	
 	;
 
 	double density;

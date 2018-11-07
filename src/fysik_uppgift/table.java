@@ -13,12 +13,12 @@ public class table {
 		System.out.println(bibliotek.svtDistance(2.8, 3600));
 //		uppgift 3
 		
-		System.out.println(bibliotek.heat(FluidTable.VATTEN, 0.005, 1));
+		System.out.println(bibliotek.heat(FluidTable.VATTEN, 5, 1));
 //		uppgift 4
 		
 		System.out.println(bibliotek.pressureUnderWater(100) + bibliotek.P_0);
 //		uppgift 5 
-		System.out.println(bibliotek.velocityToHeight(180) + 1.80);
+		System.out.println(bibliotek.velocityToHeight(50/3.6) + 1.80);
 //		uppgift 6
 		System.out.println(bibliotek.power(bibliotek.work(740, 100), 4.4));
 //		uppgift 7
@@ -65,6 +65,7 @@ public class table {
 		System.out.println(bibliotek.KraftFörLyfting(12, 0.003, FluidTable.VATTEN));
 		System.out.println(bibliotek.ElastiskStöt(0.8, 0.4, 1.5, -1.5));
 		System.out.println(bibliotek.Medelacceleration(bibliotek.delta(5, 10), bibliotek.delta(0, 20)));
+		
 		
 		
 		

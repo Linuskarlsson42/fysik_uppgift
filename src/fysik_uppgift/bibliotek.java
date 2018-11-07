@@ -12,6 +12,7 @@ public class bibliotek {
 	static double R = 8.3145;
 	static double P_0 = 100000;
 	static double c = 2.99792458E8;
+	static double T = -273.15;
 	
 /**
  * denna metod tar in grader i fahrenheit och ger tillbaka gradet i celsius
@@ -369,12 +370,35 @@ public class bibliotek {
 	}
 /**
  * 30
- * En metod som räknar ut vad två objekts hastighet kommer vara efter en elastisk
- * stöt
+ * En metod som räknar ut vad två objekts hastighet kommer vara efter en helt elastisk
+ * stöt.
+ * Tar en två massor för de olika objekten (m1 och m2)
+ * och för de två hastigheterna (v1 och v2).
+ * Först multipliceras första massan med första hastigheten och andra massan med
+ * andra hastigheten.
+ * Sedan adderas de med varandra.
+ * Tillsist så divideras summa av dessa två tal med summan av de båda massorna
+ * och ger tillbaka deras sammanlagda hastighet och en riktning beroende
+ * på om den är negativ eller positiv.
+ * 
  */
 	public static double ElastiskStöt(double m1, double m2, double v1, double v2) {
 		double velocity3;
 		velocity3 = ((m1 * v1) + (m2 * v2))/(m1 + m2);
 		return velocity3;
 	}
+/**
+ * Energin för medium övergång
+ * @param fluid
+ * @param volume
+ * @param DeltaT
+ * @return
+ */
+	public static double MediumÖvergång(FluidTable fluid, double volume, double DeltaT) {
+		double E;
+		E = fluid.steamEntalpy * volume * fluid.density;
+		return E;
+	}
+	
+	
 }
